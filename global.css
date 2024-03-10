@@ -1,0 +1,112 @@
+
+body, html{
+    -webkit-font-smoothing: antialiased;
+    background-color: #111524;
+    color: #c5c5d2;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+#root {
+    height: 100%;
+    overflow: auto;
+}
+
+.route-container {
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper {
+    --navigation-collapsed-width: 56px;
+    --navigation-expanded-width: 200px;
+    align-items: stretch;
+    background-color: #111524;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.navigation .fixed {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    width: calc(var(--navigation-collapsed-width) + 1px);
+}
+
+.navigation {
+    background-color: #111524;
+    border-right: 1px solid #000;
+    box-shadow: 0 0 0 transparent;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 12px;
+    /* transition: width.15s cubic-bezier(0, .57, .21, .99), box-shadow .15s cubic-bezier(0, .57, .21, .99); */
+    z-index: 101;
+}
+
+.navigation-logo {
+    margin: 0 0 20px 4px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.navigation-menu-item + .navigation-menu-item {
+    margin-top: 4px;
+}
+
+.navigation-menu-item {
+    color: #c5c5d2;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 400;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    /* transition: color .1s ease-in-out, background .1s ease-in-out; */
+}
+
+.navigation-menu-item-icon{
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    padding: 6px;
+    /* transition: color .1s ease-in-out; */
+    width: 32px;
+}
+
+.navigation-menu-item-icon svg {
+    color: #c5c5d2;
+    height: 20px;
+    width: 20px;
+}
+
+.navigation-menu-item-label {
+    flex: 1 1 auto;
+    font-size: 14px;
+    line-height: 20px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 6px 2px;
+    /* white-space: nowrap; */
+}
+
+.navigation-footer {
+    margin-top: auto;
+}
