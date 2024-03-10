@@ -51,7 +51,7 @@ a{
 
 .navigation {
     background-color: #111524;
-    border-right: 1px solid #000;
+    border-right: 1px solid #686666;
     box-shadow: 0 0 0 transparent;
     display: flex;
     flex-direction: column;
@@ -109,4 +109,239 @@ a{
 
 .navigation-footer {
     margin-top: auto;
+}
+
+@media (min-width: 600px){
+    .navigation .fixed+.app-main{
+        padding-left: 56px;
+    }
+}
+
+.page-wrapper{
+    background-color: #111524;
+    box-sizing: border-box;
+    color:#c5c5d2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.app-main{
+    flex: 1 1 auto;
+    height: 100%;
+    min-width: 0;
+    overflow-y: auto;
+}
+
+.docs-header{
+    align-items: center;
+    border-bottom: 1px solid #686666;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    height: 56px;
+    justify-content: space-between;
+    padding: 0 24px;
+    /* bottom: -1px; */
+    position: relative;
+}
+
+.subnav{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    bottom: -1px;
+    height: 100%;
+    position: relative;
+}
+
+.subnav-item{
+    color: #c5c5d2;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    height: 100%;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    line-height: 20px;
+}
+
+.subnav-item + .subnav-item{
+    margin-left: 20px;
+}
+
+.subnav-item-label{}
+
+.docs-header-right{
+    display: block;
+    color: #c5c5d2;
+}
+
+.btn{
+    color: #c5c5d2;
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.btn-label-wrap{
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    display: flex;
+    width: 100%;
+}
+
+.btn-item{
+    display: flex;
+}
+
+.btn-item-label{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1px;
+    margin-left: 2px;
+}
+
+.page-body.flush{
+    padding: 0;
+}
+
+.page-body.full-width{
+    width: 100%;
+}
+
+.page-body{
+    flex: 1 0 auto;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 40px 56px;
+    width: 872px;
+}
+
+.docs-page{
+    align-items: stretch;
+    display: flex;
+    height: calc(100% - 60px);
+    position: relative;
+}
+
+.docs-nav{
+    border-right: 1px solid #686666;
+    flex: 0 0 auto;
+    overflow: auto;
+    padding: 20px 12px;
+    width: 250px;
+}
+
+.side-nav{ }
+
+@media (min-width: 1372px){
+    .docs-body.ovr-page{
+        margin-left: calc(50vw - 686px);
+}
+}
+
+.docs-body{
+    flex: 1 1 auto;
+    height: 100%;
+    max-width: 100%;
+    min-width: 0px;
+    overflow: auto;
+}
+
+.ovr-page.page-body{
+    padding-top: 42px;
+}
+
+.ovr-page{
+    background-color: #111524;
+    box-sizing: border-box;
+}
+
+@media (min-width: 1372px){
+    .docs-footer{
+        margin-left: calc(50vw - 686px);
+}
+}
+
+.docs-footer {
+    padding: 20px 56px 40px;
+}
+
+@media (min-width: 450px){
+    .ovr-page h1 .mobile-break{
+        display: none;
+    }
+}
+
+h1{
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+h1, h2{
+    margin-top: 0;
+    color: #c5c5d2;
+    font-weight: 700;
+}
+
+.ovr-section{ }
+
+.ovr-shortcuts{
+    grid-gap: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    margin: 24px 0 64px;
+}
+
+.ovr-page .ovr-card{
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 20px 24px;
+    position: relative;
+}
+
+.ovr-page .ovr-card-bg{
+    bottom: 0;
+    height: auto;
+    left: 0;
+    min-height: 100%;
+    opacity: 1;
+    position: absolute;
+    transition: opacity .2s ease-in-out;
+    width: 100%;
+}
+
+.ovr-card-title{
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    position: relative;
+    transition: color .2s ease-in-out;
+    z-index: 2;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 16px;
 }
