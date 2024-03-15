@@ -324,6 +324,12 @@ h1, h2{
     position: relative;
 }
 
+.ovr-card img{
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
 .ovr-page .ovr-card-bg{
     bottom: 0;
     height: auto;
