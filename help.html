@@ -15,6 +15,7 @@
         <div class="route-container">
             <div class="wrapper">
                 <div class="navigation fixed" id="sidenav">
+                    <div class="empty-div"></div>
                     <div class="navigation-logo">
                         <a href="index.html">
                             <img src="./images/logo.png" alt="escape-room-logo" width="120px">
@@ -209,25 +210,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-                var coll = document.getElementsByClassName("faq-list");
-                var i;
-
-                for (i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function () {
-                        this.classList.toggle("active");
-                        var content = this.nextElementSibling;
-                        var toggle = this.querySelector('.toggle'); // 获取按钮内的 toggle 元素
-                        if (content.style.display === "block") {
-                            content.style.display = "none";
-                            toggle.textContent = "+"; // 如果内容块已显示，则设置 toggle 内容为 "+"
-                        } else {
-                            content.style.display = "block";
-                            toggle.textContent = "-"; // 如果内容块未显示，则设置 toggle 内容为 "-"
-                        }
-                    });
-                }
-            </script>
+            <script src="./global.js"></script>
 </body>
 
 </html>

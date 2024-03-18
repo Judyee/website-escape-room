@@ -60,6 +60,10 @@ a{
     z-index: 101;
 }
 
+.empty-div {
+    height: 150px;
+}
+
 .navigation-logo {
     margin: 0 0 20px 4px;
     width: 100%;
@@ -111,11 +115,19 @@ a{
     margin-top: auto;
 }
 
+#sidenav .empty-div{
+    display: inline;
+}
+
 #sidenav .navigation-logo{
     display: none;
 }
 
 #sidenav .navigation-menu-item-label{
+    display: none;
+}
+
+#sidenav:hover .empty-div{
     display: none;
 }
 
@@ -208,7 +220,7 @@ a{
 
 .btn-label-wrap{
     align-items: center;
-    justify-content: center;
+    justify-content: right;
     opacity: 1;
     display: flex;
     width: 100%;
@@ -224,6 +236,10 @@ a{
     justify-content: center;
     padding-bottom: 1px;
     margin-left: 2px;
+}
+
+.btn-item:hover,.btn-item-label:hover{
+    color: #fff;
 }
 
 .page-body.flush{
@@ -357,8 +373,9 @@ h1{
 h2{
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 20px;
-    display: block;
+    margin-bottom: 10px;
+    display: flex;
+    position: relative;
 }
 
 h1, h2{
@@ -368,6 +385,10 @@ h1, h2{
 }
 
 .ovr-section{ }
+
+.ovr-section-title{
+    display: flex;
+}
 
 .ovr-shortcuts{
     grid-gap: 32px;
@@ -381,7 +402,7 @@ h1, h2{
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    height: 250px;
+    height: 320px;
     justify-content: flex-end;
     overflow: hidden;
     padding: 20px 24px;
@@ -406,18 +427,23 @@ h1, h2{
 }
 
 .ovr-card-title{
-    color: white;
-    text-shadow: 3px 3px 5px black;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 10px #1e253f;
     position: relative;
     transition: color .2s ease-in-out;
     z-index: 2;
-    font-weight: 700;
+    font-weight: 900;
     line-height: 24px;
-    font-size: 16px;
+    font-size: 20px;
+}
+
+.ovr-card-title:hover{
+    -webkit-text-stroke: thin #1e253f;
 }
 
 .table-select{
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .all{
@@ -490,6 +516,17 @@ h1, h2{
 .ovr-footer-item{
     max-width: 100%;
     text-align: center;
+}
+
+.ovr-page .ovr-card-lo{
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    height: 240px;
+    justify-content: flex-end;
+    overflow: hidden;
+    padding: 20px 24px;
+    position: relative;
 }
 
 .faq-text a{

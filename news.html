@@ -15,6 +15,7 @@
         <div class="route-container">
             <div class="wrapper">
                 <div class="navigation fixed" id="sidenav">
+                    <div class="empty-div"></div>
                     <div class="navigation-logo">
                         <a href="index.html">
                             <img src="./images/logo.png" alt="escape-room-logo" width="120px">
@@ -207,30 +208,7 @@
                 </div>
             </div>
         </div>
-        <script>
-            $(document).ready(function () {
-                $("#act").hide(); // 隐藏ID=act的div
-                $("#imp").hide(); // 隐藏ID=update的div
-
-                $("#allBtn").click(function () {
-                    $("#act").hide()
-                    $("#imp").hide()
-                    $("#all").show()
-                });
-
-                $("#actBtn").click(function () {
-                    $("#all").hide()
-                    $("#imp").hide()
-                    $("#act").show()
-                });
-
-                $("#impBtn").click(function () {
-                    $("#act").hide()
-                    $("#all").hide()
-                    $("#imp").show()
-                });
-            });
-        </script>
+        <script src="./global.js"></script>
 </body>
 
 </html>
