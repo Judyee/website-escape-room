@@ -315,6 +315,11 @@ a.side-nav-item:focus-visible {
     outline: 0
 }
 
+.active-exact{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 a.side-nav-child {
     font-size: 14px;
     line-height: 20px;

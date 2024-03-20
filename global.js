@@ -1,3 +1,21 @@
+// index
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtns = document.querySelectorAll('.active-exact');
+    // console.log(toggleBtns)
+
+    for (i = 0; i < toggleBtns.length; i++) {
+        toggleBtns[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+});
+
 // help頁面
 var coll = document.getElementsByClassName("faq-list");
 var i;
