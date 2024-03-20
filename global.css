@@ -360,6 +360,7 @@ a.side-nav-child {
 }
 
 .docs-footer {
+    height: 120px;
     padding: 20px 56px 40px;
 }
 
@@ -400,14 +401,14 @@ h1, h2{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    margin: 24px 0 64px;
+    margin: 24px 0 30px;
 }
 
 .ovr-page .ovr-card{
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    height: 320px;
+    height: 360px;
     justify-content: flex-end;
     overflow: hidden;
     padding: 20px 24px;
@@ -444,6 +445,16 @@ h1, h2{
 
 .ovr-card-title:hover{
     -webkit-text-stroke: thin #1e253f;
+}
+
+.ovr-card-bg {
+    width: 100%;
+    height: auto;
+    transition: transform 1s ease; /* 添加过渡效果 */
+}
+
+.ovr-footer-item:hover .ovr-card-bg {
+    transform: scale(1.05); /* 鼠标悬停时稍微放大 */
 }
 
 .table-select{
@@ -657,6 +668,13 @@ hr{
     margin-left: 5px;
     margin-right: 5px;
     width: calc(16.66% - 10px);
+    -webkit-text-stroke: medium;
+}
+
+.contect-timeBtn.selected {
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #f6a822;
 }
 
 .contect-dayparts-direction{
@@ -761,6 +779,10 @@ hr{
     border-left-color: rgba(#c5c5d2);
 }
 
+.contect-info-time.selected .contect-info-time-detail {
+    transform: rotate(180deg);
+}
+
 .contect-info-time-title{
     display: flex;
     -webkit-box-align: center;
@@ -783,7 +805,6 @@ hr{
 .contect-info-time-detail{
     width: 20px;
     height: 20px;
-    transform: rotate(180deg);
     position: absolute;
     right: 40px;
     top: calc(50% - 10px);
@@ -791,6 +812,7 @@ hr{
 }
 
 .contect-moreinfo-time-bg{
+    display: none;
     padding: 20px;
     border-style: solid;
     border-width: 1px;
@@ -802,7 +824,7 @@ hr{
 }
 
 .contect-moreinfo-title{
-    padding: 10px;
+    padding: 5px;
     margin-left: 15px;
     display: table;
     width: 100%;

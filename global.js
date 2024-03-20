@@ -60,3 +60,27 @@ $(document).ready(function () {
 });
 
 // contect頁面
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('.contect-timeBtn');
+
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            // 移除所有按钮的选中状态
+            buttons.forEach(function (btn) {
+                btn.classList.remove('selected');
+            });
+            // 将当前点击的按钮设为选中状态
+            this.classList.add('selected');
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const infoTime = document.querySelector('.contect-info-time');
+    const moreInfo = document.querySelector('.contect-moreinfo-time-bg');
+
+    infoTime.addEventListener('click', function () {
+        this.classList.toggle('selected'); // 切换选中状态
+        moreInfo.style.display = (moreInfo.style.display === 'block') ? 'none' : 'block'; // 切换展开/折叠
+    });
+});
